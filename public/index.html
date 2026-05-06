@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gig Fiti</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <header class="hero">
+        <nav class="topbar">
+          <div class="brand">
+            <span class="brand-mark">GF</span>
+            <span>Gig Fiti</span>
+          </div>
+          <div class="nav-actions">
+            <a href="#workflow">How it works</a>
+            <a href="#talent">Top talent</a>
+            <button class="ghost-button">Post a Gig</button>
+          </div>
+        </nav>
+
+        <div class="hero-grid">
+          <section class="hero-copy">
+            <p class="eyebrow">Instant matching for local and remote gigs</p>
+            <h1>
+              Post the job.
+              <span>See the right person for it in minutes.</span>
+            </h1>
+            <p class="hero-text">
+              Gig Fiti connects employers with vetted gig workers based on
+              budget, location, availability, ratings, and verified skills.
+            </p>
+            <div class="hero-cta">
+              <button class="primary-button" data-scroll="#composer">
+                Create a Job Request
+              </button>
+              <button class="secondary-button" data-scroll="#talent">
+                Explore Workers
+              </button>
+            </div>
+            <div class="hero-stats">
+              <article>
+                <strong>2 min</strong>
+                <span>average match time</span>
+              </article>
+              <article>
+                <strong>4.8/5</strong>
+                <span>worker satisfaction</span>
+              </article>
+              <article>
+                <strong>92%</strong>
+                <span>budget-fit matches</span>
+              </article>
+            </div>
+          </section>
+
+          <section class="match-panel" id="composer">
+            <div class="panel-card">
+              <div class="panel-heading">
+                <p>Smart job composer</p>
+                <span>Live matching prototype</span>
+              </div>
+
+              <form id="job-form" class="job-form">
+                <label>
+                  Job type
+                  <select id="job-category">
+                    <option value="garden">Garden work</option>
+                    <option value="delivery">Delivery run</option>
+                    <option value="cleaning">House cleaning</option>
+                    <option value="assistant">Virtual assistant</option>
+                    <option value="design">Graphic design</option>
+                    <option value="developer">Frontend development</option>
+                  </select>
+                </label>
+
+                <label>
+                  Work mode
+                  <div class="toggle-row">
+                    <button type="button" class="mode-chip active" data-mode="physical">
+                      Physical
+                    </button>
+                    <button type="button" class="mode-chip" data-mode="remote">
+                      Remote
+                    </button>
+                  </div>
+                </label>
+
+                <div class="dual-grid">
+                  <label>
+                    Budget
+                    <input id="budget" type="range" min="25" max="300" value="110" />
+                    <span class="field-note" id="budget-value">$110 total</span>
+                  </label>
+                  <label>
+                    Radius
+                    <input id="distance" type="range" min="1" max="25" value="8" />
+                    <span class="field-note" id="distance-value">Within 8 miles</span>
+                  </label>
+                </div>
+
+                <label>
+                  Location
+                  <input
+                    id="location"
+                    type="text"
+                    value="Westlands, Nairobi"
+                    placeholder="Enter city or neighborhood"
+                  />
+                </label>
+
+                <label>
+                  Required skills
+                  <div class="skill-pills" id="skill-pills"></div>
+                </label>
+
+                <button type="submit" class="primary-button full-width">
+                  Find Best Match
+                </button>
+              </form>
+            </div>
+
+            <div class="match-card" id="match-card"></div>
+          </section>
+        </div>
+      </header>
+
+      <main>
+        <section class="workflow" id="workflow">
+          <div class="section-heading">
+            <p class="eyebrow">Workflow</p>
+            <h2>Built for urgent, skill-based hiring</h2>
+          </div>
+          <div class="workflow-grid">
+            <article>
+              <span>01</span>
+              <h3>Describe the gig</h3>
+              <p>
+                Employers set task type, budget, location, timing, and whether
+                the role is in-person or remote.
+              </p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Instantly match talent</h3>
+              <p>
+                The platform scores workers by skills, proximity, response
+                speed, ratings, and budget alignment.
+              </p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Ping the best fit</h3>
+              <p>
+                Employers see the best worker first and can contact backups if
+                the top match is unavailable.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="talent-section" id="talent">
+          <div class="section-heading inline">
+            <div>
+              <p class="eyebrow">Talent snapshot</p>
+              <h2>Workers employers can trust fast</h2>
+            </div>
+            <p class="section-copy">
+              Each profile combines public ratings, verified skills, availability,
+              location coverage, and preferred pricing.
+            </p>
+          </div>
+          <div class="talent-grid" id="talent-grid"></div>
+        </section>
+
+        <section class="insights-section">
+          <div class="section-heading">
+            <p class="eyebrow">What makes this useful</p>
+            <h2>A homepage that already demonstrates the matching engine</h2>
+          </div>
+          <div class="insight-band">
+            <article>
+              <h3>Budget-aware</h3>
+              <p>
+                Workers are ranked higher when their preferred rate fits the
+                employer's total budget comfortably.
+              </p>
+            </article>
+            <article>
+              <h3>Location-sensitive</h3>
+              <p>
+                Local gigs prioritize nearby workers, while remote gigs ignore
+                distance and favor digital skill overlap.
+              </p>
+            </article>
+            <article>
+              <h3>Trust-first</h3>
+              <p>
+                Ratings, repeat-completion signals, and verified capabilities
+                stay visible before an employer even reaches out.
+              </p>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+  </html>

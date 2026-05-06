@@ -1,0 +1,9 @@
+{
+  "name": "gig-fiti",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Frontend prototype for a gig-matching marketplace",
+  "scripts": {
+    "dev": "node server.js"
+  }
+}
