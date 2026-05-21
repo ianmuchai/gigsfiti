@@ -1,14 +1,15 @@
 # Gig Fiti
 
-Gig Fiti is a frontend prototype for a gig-matching marketplace. It demonstrates a landing page plus a live matching experience that ranks workers by category, budget, distance, ratings, and skill fit.
+Gig Fiti is a full-stack prototype for a KES-based gig-matching marketplace. It includes a Node backend API, a multi-page single-page app, live worker matching, job posting, messages, and a hiring dashboard.
 
 ## Project Structure
 
-- `public/index.html` contains the page structure.
+- `server.js` serves the app and provides API routes for categories, workers, jobs, messages, matching, and worker contact.
+- `api/index.js` mirrors the backend API for Vercel serverless deployment.
+- `public/index.html` contains the app shell and page views.
 - `public/styles.css` contains the visual design and responsive layout.
-- `public/app.js` contains the matching logic and UI behavior.
-- `server.js` is a small local Node server for previewing the app.
-- `vercel.json` configures static deployment on Vercel.
+- `public/app.js` contains client-side routing, API calls, matching UI behavior, job submission, and contact actions.
+- `vercel.json` contains the existing Vercel project metadata.
 
 ## Run Locally
 
@@ -19,17 +20,9 @@ npm run dev
 
 Then open `http://localhost:3000`.
 
-## Deploy To Vercel
+## Deploy
 
-This project is configured as a static Vercel deployment using the `public` directory as the output.
-
-### Vercel Import Settings
-
-- Framework Preset: `Other`
-- Build Command: leave empty
-- Output Directory: `public`
-
-If Vercel detects the settings automatically from `vercel.json`, you can keep the defaults it shows.
+This project uses `server.js` locally and `api/index.js` on Vercel. Push to GitHub, then redeploy the linked Vercel project so `/api/*` routes are served by the serverless function.
 
 ## Share For Feedback
 
